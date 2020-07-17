@@ -185,11 +185,6 @@ nav ul > li:last-child {
   cursor: pointer;
 }
 
-.map {
-    width: 600px;
-    height: 450px;
-}
-
 /*
  * === SECTION === 
  */
@@ -249,6 +244,16 @@ section  p {
 
 .contacts ul {
   bottom: 0;
+}
+
+.map {
+  width: 600px;
+  height: 450px;
+}
+
+.map-block {
+  height: 550px;
+  position: relative;
 }
 
 .contacts li {
