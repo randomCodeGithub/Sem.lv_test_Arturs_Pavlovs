@@ -1,14 +1,29 @@
 let anchorLink = document.getElementById("anchor-link");
+let timer = null;
+
+// OPEN OVERLAY NAVIGATION
+function openNav() {
+  document.getElementById("overlay").style.width = "100%";
+  document.getElementById("overlay").style.height = "100%";
+}
+
+// CLOSE OVERLAY NAVIGATION
+function closeNav() {
+  document.getElementById("overlay").style.removeProperty("width");
+  document.getElementById("overlay").style.removeProperty("height");
+}
+
+//SCROLL TO SECTION 
+function scrollToId(ElementId) {
+  let id = document.getElementById(ElementId).offsetTop;
+  window.scrollTo(0, id - 80);
+}
 
 //SCROLL TO TOP 
-
 anchorLink.addEventListener("click", function () {
   window.scrollTo(0, 0);
 });
 
-
-
-let timer = null;
 // IF NOT SCROLLING EVENT LISTENER
 window.addEventListener(
   "scroll",
@@ -40,21 +55,3 @@ window.addEventListener(
   },
   true
 );
-
-// OPEN OVERLAY NAVIGATION
-function openNav() {
-  document.getElementById("overlay").style.width = "100%";
-  document.getElementById("overlay").style.height = "100%";
-}
-
-// CLOSE OVERLAY NAVIGATION
-function closeNav() {
-  document.getElementById("overlay").style.removeProperty("width");
-  document.getElementById("overlay").style.removeProperty("height");
-}
-
-//SCROLL TO SECTION 
-function scrollToId(ElementId) {
-  let id = document.getElementById(ElementId).offsetTop;
-  window.scrollTo(0, id - 80);
-}
